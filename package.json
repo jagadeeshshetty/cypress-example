@@ -1,0 +1,22 @@
+{
+  "name": "cypresstest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cypress open",
+    "test:chrome": "cypress run --browser chrome",
+    "combine:report": "mochawesome-merge ./mochawesome-report/*.json -o index.json",
+    "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^7.3.0"
+  },
+  "devDependencies": {
+    "mochawesome": "6.1.1",
+    "mochawesome-merge": "4.1.0",
+    "mochawesome-report-generator": "5.1.0"
+  }
+}
